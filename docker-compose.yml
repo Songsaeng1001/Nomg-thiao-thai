@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: nong_thiao_thai_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1234
+      POSTGRES_DB: nong_thiao_thai
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./seed.sql:/docker-entrypoint-initdb.d/seed.sql
+
+volumes:
+  postgres_data:
