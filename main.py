@@ -1,6 +1,3 @@
-def main():
-    print("Hello from my-adk-project!")
+from toolagent.search_places import search_places
 
-
-if __name__ == "__main__":
-    main()
+print(search_places("เชียงใหม่"))

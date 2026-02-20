@@ -1,8 +1,7 @@
-from google.adk.agents.llm_agent import Agent
+from google.adk.agents import Agent
+from toolagent.search_places import search_places
 
-root_agent = Agent(
-    model='gemini-2.5-flash',
-    name='root_agent',
-    description='A helpful assistant for user questions.',
-    instruction='Answer user questions to the best of your knowledge',
+travel_agent = Agent(
+    model="gemini-1.5-pro",
+    tools=[search_places]
 )
