@@ -1,3 +1,7 @@
-from toolagent.search_places import search_places
+from myagent.agent import agent
 
-print(search_places("เชียงใหม่"))
+response = agent.run(
+    "แนะนำที่เที่ยวเชียงใหม่ งบไม่เกิน 200 บาท"
+)
+
+print(response)
